@@ -39,7 +39,6 @@ const Header = ({ children }) => {
       backgroundColor={`#80541b`}
       color={`black`}
       fluid={data.header.childImageSharp.fluid}
-      durationFadeIn={250}
       draggable={false}
     >
       <h1 style={{ padding: "140px 0px", color: "white", fontSize: 50 }}>
