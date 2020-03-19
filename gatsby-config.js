@@ -6,7 +6,7 @@ module.exports = {
       summary: `Just a random dev`,
     },
     description: `Just some random web dev's blog`,
-    siteUrl: `https://5e73bc575d8ed3019f7b86f5--boring-goldwasser-2aad8b.netlify.com/`,
+    siteUrl: `https://timsblogg.netlify.com/`,
     social: {
       mastodon: `@tim@mastodon.social`,
     },
