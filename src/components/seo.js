@@ -18,7 +18,9 @@ const SEO = ({ description, lang, meta, title }) => {
           siteMetadata {
             title
             description
-            social { twitter }
+            social {
+              mastodon
+            }
           }
         }
       }
@@ -52,19 +54,19 @@ const SEO = ({ description, lang, meta, title }) => {
           content: `website`,
         },
         {
-          name: `twitter:card`,
+          name: `mastodon:card`,
           content: `summary`,
         },
         {
-          name: `twitter:creator`,
-          content: site.siteMetadata.social.twitter,
+          name: `mastodon:creator`,
+          content: site.siteMetadata.social.mastodon,
         },
         {
-          name: `twitter:title`,
+          name: `mastodon:title`,
           content: title,
         },
         {
-          name: `twitter:description`,
+          name: `mastodon:description`,
           content: metaDescription,
         },
       ].concat(meta)}
