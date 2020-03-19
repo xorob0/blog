@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Tim's Blog`,
+    title: `Toum's Blog`,
     author: {
-      name: `Tim`,
+      name: `Toum`,
       summary: `Just a random dev`,
     },
-    description: `Just some random web dev's blog`,
-    siteUrl: `https://timsblogg.netlify.com/`,
+    description: `Toum's blog about web and mobile development, open source and more`,
+    siteUrl: `https://toum.me/`,
     social: {
       mastodon: `@tim@mastodon.social`,
     },
@@ -54,8 +54,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Tim's Blog`,
-        short_name: `Tim's Blog`,
+        name: `Toum's Blog`,
+        short_name: `Toum's Blog`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#0099cc`,

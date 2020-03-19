@@ -1,7 +1,7 @@
 {
   "name": "blog",
   "private": true,
-  "description": "Some random's dev's blog",
+  "description": "Toum's blog",
   "version": "0.-.1",
   "author": "Tim Simon <xorob0@posteo.net>",
   "dependencies": {
