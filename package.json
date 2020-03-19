@@ -1,12 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "Tim's Blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "description": "Some random's dev's blog",
+  "version": "0.-.1",
+  "author": "Tim Simon <xorob0@posteo.net>",
   "dependencies": {
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.2.44",
@@ -24,7 +21,6 @@
     "gatsby-source-filesystem": "^2.1.56",
     "gatsby-transformer-remark": "^2.6.59",
     "gatsby-transformer-sharp": "^2.3.19",
-    "gh-pages": "^2.2.0",
     "prismjs": "^1.19.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -38,16 +34,16 @@
   "devDependencies": {
     "prettier": "^1.19.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
-    "gatsby"
+    "developer",
+    "react",
+    "react-native",
+    "open source",
+    "web",
+    "selfhosting"
   ],
   "license": "MIT",
   "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
