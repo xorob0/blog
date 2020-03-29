@@ -3,46 +3,44 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import styled from "styled-components"
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
+const Article = styled.article`
+  max-width: 1000px;
+  font-family: "Lora";
+  color: #2e3440;
+`
+
+const Title = styled.h2`
+  font-size: 48px;
+  margin: 5px 0px;
+`
+
+const Content = styled.section`
+  margin: 30px 0px 0px 0px;
+`
+
+const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article>
+      <Article>
         <header>
-          <h1 style={{}}>{post.frontmatter.title}</h1>
-          <p style={{}}>{post.frontmatter.date}</p>
+          <Title>{post.frontmatter.title}</Title>
+          <p>
+            {post.frontmatter.date} by {post.frontmatter.author}
+          </p>
         </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr style={{}} />
+        <Content dangerouslySetInnerHTML={{ __html: post.html }} />
         <footer></footer>
-      </article>
-
-      <nav>
-        <ul style={{}}>
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
+      </Article>
     </Layout>
   )
 }
@@ -64,6 +62,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        author
       }
     }
   }
