@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 
 const Grow = styled.div`
   display: flex;
-  flex-grow: 1;
+  flex-grow: 2;
 `
 
 const Title = styled.h1`
@@ -46,8 +46,11 @@ const NavElement = styled(A)`
 
 const Nav = styled.nav`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   margin: 10px 40px;
+  text-decoration: underline;
+  flex: 1;
 `
 
 const HomeLink = styled(A)`
@@ -68,6 +71,7 @@ const Header = ({ children }) => {
       </Grow>
       <Nav>
         <NavElement to="About">about</NavElement>
+        <NavElement to="/rss.xml">RSS</NavElement>
       </Nav>
     </Wrapper>
   )
