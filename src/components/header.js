@@ -1,50 +1,47 @@
-import BackgroundImage from "gatsby-background-image"
-import { useStaticQuery, graphql } from "gatsby"
 import React from "react"
+import { Link } from "gatsby"
+import styled from "styled-components"
+
+const Wrapper = styled.div`
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+`
+
+const Grow = styled.div`
+  display: flex;
+  flex-grow: 3;
+`
+
+const Title = styled.h1`
+  font-size: 36;
+  font-family: "Lustria";
+  margin: 10px 40px;
+`
+
+const NavElement = styled(Link)`
+  font-size: 24;
+  font-family: "Lustria";
+  margin: 0px 10px;
+`
+
+const Nav = styled.nav`
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  margin: 10px 40px;
+`
 
 const Header = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      header: file(absolutePath: { regex: "/header.jpg/" }) {
-        childImageSharp {
-          fluid(maxWidth: 1920) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-      headersvg: imageSharp(id: { regex: "/header.jpg/" }) {
-        sizes(
-          quality: 100
-          traceSVG: { color: "rgb(56, 47, 92)", threshold: 75 }
-          toFormat: JPG
-        ) {
-          tracedSVG
-          src
-        }
-      }
-    }
-  `)
-  console.log(JSON.stringify(data.headersvg))
   return (
-    <BackgroundImage
-      loading="eager"
-      fadeIn="soft"
-      critical
-      style={{
-        width: "100vw",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-      backgroundColor={`#80541b`}
-      color={`black`}
-      fluid={data.header.childImageSharp.fluid}
-      draggable={false}
-    >
-      <h1 style={{ padding: "140px 0px", color: "white", fontSize: 50 }}>
-        {children}
-      </h1>
-    </BackgroundImage>
+    <Wrapper>
+      <Grow>
+        <Title>{children}</Title>
+      </Grow>
+      <Nav>
+        <NavElement to="About">about</NavElement>
+      </Nav>
+    </Wrapper>
   )
 }
 

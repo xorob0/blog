@@ -1,5 +1,6 @@
 // custom typefaces
-import "typeface-montserrat"
-import "typeface-merriweather"
+import "typeface-lustria"
+import "typeface-lora"
 
 import "prismjs/themes/prism.css"
+import "./cleaner.css"
