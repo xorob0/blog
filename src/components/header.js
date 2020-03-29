@@ -70,8 +70,8 @@ const Header = ({ children }) => {
         </HomeLink>
       </Grow>
       <Nav>
-        <NavElement to="About">about</NavElement>
         <NavElement to="/rss.xml">RSS</NavElement>
+        <NavElement to="about">About</NavElement>
       </Nav>
     </Wrapper>
   )
