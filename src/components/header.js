@@ -31,6 +31,7 @@ const Title = styled.h1`
 const TitleLogo = styled(Logo)`
   height: 42px;
   width: 42px;
+  padding-bottom: 4px;
 `
 
 const NavElement = styled(A)`
