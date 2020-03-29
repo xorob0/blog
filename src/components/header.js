@@ -50,7 +50,9 @@ const Nav = styled.nav`
   align-items: center;
   margin: 10px 40px;
   text-decoration: underline;
-  flex: 1;
+  @media (max-width: 570px) {
+    flex: 1;
+  }
 `
 
 const HomeLink = styled(A)`
