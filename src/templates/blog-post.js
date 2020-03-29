@@ -20,10 +20,9 @@ const Content = styled.section`
   margin: 30px 0px 0px 0px;
 `
 
-const BlogPostTemplate = ({ data, pageContext }) => {
+const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
-  const { previous, next } = pageContext
 
   return (
     <Layout title={siteTitle}>

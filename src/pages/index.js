@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import Article from "../components/article"
+import Summary from "../components/summary"
 
 const ArticleList = styled.section`
   display: flex;
@@ -19,6 +20,7 @@ const BlogIndex = ({ data }) => {
   return (
     <Layout title={siteTitle}>
       <SEO title="All posts" />
+      <Summary> {data.site.siteMetadata.author.summary}</Summary>
       <ArticleList>
         {posts.map(({ node }) => (
           <Article node={node} />
@@ -35,6 +37,9 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        author {
+          summary
+        }
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
