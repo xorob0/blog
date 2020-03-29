@@ -32,6 +32,10 @@ const TitleLogo = styled(Logo)`
   height: 42px;
   width: 42px;
   padding-bottom: 4px;
+  &:hover {
+    filter: grayscale(2);
+  }
+  transition: 0.3s;
 `
 
 const NavElement = styled(A)`
