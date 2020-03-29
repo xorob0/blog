@@ -12,7 +12,6 @@
     "gatsby-plugin-feed": "^2.3.29",
     "gatsby-plugin-manifest": "^2.2.48",
     "gatsby-plugin-offline": "^3.0.41",
-    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.1.24",
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sharp": "^2.4.13",
@@ -29,7 +28,9 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.0.1",
+    "typeface-lora": "^0.0.72",
+    "typeface-lustria": "^0.0.72"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
