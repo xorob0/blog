@@ -8,6 +8,9 @@ const Summary = styled.h4`
   font-family: "Lustria";
   max-width: 1000px;
   text-align: center;
+  @media (max-width: 570px) {
+    font-size: 26px;
+  }
 `
 
 export default Summary

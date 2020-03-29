@@ -7,11 +7,12 @@ const Wrapper = styled.div`
   width: 100vw;
   max-width: 100%;
   display: flex;
+  flex-wrap: wrap;
 `
 
 const Grow = styled.div`
   display: flex;
-  flex-grow: 3;
+  flex-grow: 1;
 `
 
 const Title = styled.h1`
@@ -23,6 +24,9 @@ const Title = styled.h1`
   }
   transition: 0.3s;
   margin: 0px 10px;
+  @media (max-width: 570px) {
+    font-size: 38px;
+  }
 `
 const TitleLogo = styled(Logo)`
   height: 42px;
@@ -42,8 +46,7 @@ const NavElement = styled(A)`
 
 const Nav = styled.nav`
   display: flex;
-  flex-grow: 1;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin: 10px 40px;
 `
 
