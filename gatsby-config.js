@@ -3,12 +3,12 @@ module.exports = {
     title: `Toum's Blog`,
     author: {
       name: `Toum`,
-      summary: `Just a random dev`,
+      summary: `Hello, I'm Toum and this is my blog, I am a web and mobile dev playing with react but I'll probably be posting bullshit articles about everything tech related`,
     },
     description: `Toum's blog about web and mobile development, open source and more`,
     siteUrl: `https://toum.me/`,
     social: {
-      mastodon: `@tim@mastodon.social`,
+      mastodon: `@tim@mastodon.technology`,
     },
   },
   plugins: [
