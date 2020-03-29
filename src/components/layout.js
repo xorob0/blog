@@ -4,7 +4,7 @@ import Header from "./header"
 const Layout = ({ title, children }) => (
   <>
     <Header>{title}</Header>
-    <div>
+    <div style={{ fontFamily: "Lora" }}>
       <main
         style={{
           display: "flex",
@@ -14,7 +14,9 @@ const Layout = ({ title, children }) => (
       >
         {children}
       </main>
-      <footer>© {new Date().getFullYear()}, by Tim Simon</footer>
+      <footer style={{ margin: 20 }}>
+        © {new Date().getFullYear()}, by Tim Simon
+      </footer>
     </div>
   </>
 )
