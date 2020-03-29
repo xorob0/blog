@@ -4,6 +4,7 @@ module.exports = {
     author: {
       name: `Toum`,
       summary: `Hello, I'm Toum and this is my blog, I am a web and mobile dev playing with react but I'll probably be posting bullshit articles about everything tech related`,
+      shortSummary: `Writing bullshit about everything tech related`,
     },
     description: `Toum's blog about web and mobile development, open source and more`,
     siteUrl: `https://toum.me/`,
