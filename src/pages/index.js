@@ -10,6 +10,7 @@ const ArticleList = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 20px;
 `
 
 const BlogIndex = ({ data }) => {
