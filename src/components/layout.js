@@ -17,7 +17,7 @@ const Main = styled.main`
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 50px;
+  padding: 20px;
 `
 
 const Wrapper = styled.div`
