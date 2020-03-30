@@ -88,10 +88,6 @@ const BlogPostTemplate = ({ data }) => {
           Name
         </label>
         <label>
-          <input name="fields[email]" type="email" />
-          E-mail
-        </label>
-        <label>
           <textarea name="fields[message]" />
           Message
         </label>
