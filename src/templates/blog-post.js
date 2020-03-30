@@ -65,6 +65,32 @@ const BlogPostTemplate = ({ data }) => {
         </Header>
         <Content dangerouslySetInnerHTML={{ __html: post.html }} />
       </Article>
+
+      <form
+        method="POST"
+        action="https://dev.staticman.net/v3/entry/github/xorob0/blog/master"
+      >
+        <input type="hidden" value={data.site.siteMetadata.siteUrl} />
+        <input
+          name="options[article]"
+          type="hidden"
+          value={data.markdownRemark.id}
+        />
+        <label>
+          <input name="fields[name]" type="text" />
+          Name
+        </label>
+        <label>
+          <input name="fields[email]" type="email" />
+          E-mail
+        </label>
+        <label>
+          <textarea name="fields[message]" />
+          Message
+        </label>
+
+        <button type="submit">Go!</button>
+      </form>
     </Layout>
   )
 }
@@ -77,6 +103,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
+        siteUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
