@@ -10,6 +10,7 @@ const Layout = ({ title, children }) => (
           display: "flex",
           alignItems: "center",
           flexDirection: "column",
+          padding: "50px",
         }}
       >
         {children}
