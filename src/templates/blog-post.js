@@ -33,7 +33,7 @@ const Subtitle = styled.h3`
 
 const Content = styled.section`
   margin: 30px 0px 0px 0px;
-  width: 100%;
+  width: fit-content;
 `
 
 const Header = styled.header`
@@ -65,7 +65,6 @@ const BlogPostTemplate = ({ data }) => {
           </Label>
         </Header>
         <Content dangerouslySetInnerHTML={{ __html: post.html }} />
-        <footer></footer>
       </Article>
     </Layout>
   )
