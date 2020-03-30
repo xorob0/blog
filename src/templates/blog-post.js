@@ -6,6 +6,10 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 
 const Article = styled.article`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   max-width: 1000px;
   font-family: "Lora";
   color: #2e3440;
@@ -14,10 +18,29 @@ const Article = styled.article`
 const Title = styled.h2`
   font-size: 48px;
   margin: 5px 0px;
+  text-align: center;
+`
+
+const Subtitle = styled.h3`
+  font-size: 28px;
+  margin: 5px 0px;
+  font-weight: 100;
+  text-align: center;
 `
 
 const Content = styled.section`
   margin: 30px 0px 0px 0px;
+  width: 1000px;
+`
+
+const Header = styled.header`
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 750px;
+`
+
+const Label = styled.small`
+  text-align: right;
 `
 
 const BlogPostTemplate = ({ data }) => {
@@ -31,12 +54,13 @@ const BlogPostTemplate = ({ data }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <Article>
-        <header>
+        <Header>
           <Title>{post.frontmatter.title}</Title>
-          <p>
+          <Subtitle>{post.frontmatter.description}</Subtitle>
+          <Label>
             {post.frontmatter.date} by {post.frontmatter.author}
-          </p>
-        </header>
+          </Label>
+        </Header>
         <Content dangerouslySetInnerHTML={{ __html: post.html }} />
         <footer></footer>
       </Article>
@@ -51,6 +75,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
