@@ -126,8 +126,6 @@ const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const comments = data.allCommentsJson.edges
-  console.log(comments)
-
   return (
     <Layout title={siteTitle}>
       <SEO
@@ -162,6 +160,11 @@ const BlogPostTemplate = ({ data }) => {
       >
         <input
           name="field[article]"
+          type="hidden"
+          value={typeof window !== "undefined" && window.location.pathname}
+        />
+        <input
+          name="option[article]"
           type="hidden"
           value={typeof window !== "undefined" && window.location.pathname}
         />
