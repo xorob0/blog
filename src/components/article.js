@@ -2,6 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import { A } from "./a"
 
+const ArticleContainer = styled.article`
+  max-width: 500px;
+`
+
 const LinkContainer = styled(A)`
   color: #2e3440;
   &:hover {
@@ -30,10 +34,15 @@ const Label = styled.small`
   margin: 20px 0px;
 `
 
+const Spacer = styled.hr`
+  margin: 10px 0px;
+  margin-bottom: 30px;
+`
+
 const Article = ({ node }) => {
   const title = node.frontmatter.title || node.fields.slug
   return (
-    <article key={node.fields.slug}>
+    <ArticleContainer key={node.fields.slug}>
       <LinkContainer to={node.fields.slug}>
         <Title>{title}</Title>
         <Subtitle
@@ -45,8 +54,8 @@ const Article = ({ node }) => {
       <Label>
         Posted by {node.frontmatter.author} on {node.frontmatter.date}
       </Label>
-      <hr style={{ margin: 10 }} />
-    </article>
+      <Spacer />
+    </ArticleContainer>
   )
 }
 export default Article
