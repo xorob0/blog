@@ -15,7 +15,6 @@ const Article = styled.article`
   box-sizing: border-box;
   font-family: "Lora";
   color: #2e3440;
-  margin: 40px;
   padding: 50px;
 `
 
