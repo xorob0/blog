@@ -163,7 +163,7 @@ const BlogPostTemplate = ({ data }) => {
         <input
           name="field[article]"
           type="hidden"
-          value={window && window.location.pathname}
+          value={typeof window !== "undefined" && window.location.pathname}
         />
         <Input
           name="fields[name]"
