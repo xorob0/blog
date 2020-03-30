@@ -68,7 +68,7 @@ const BlogPostTemplate = ({ data }) => {
 
       <form
         method="POST"
-        action="https://staticman3.herokuapp.com/v2/entry/xorob0/blog/master/comments"
+        action="https://staticman3.herokuapp.com/v2/entry/xorob0/blog/master"
       >
         <input
           name="options[redirect]"
