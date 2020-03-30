@@ -49,6 +49,8 @@ const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
 
+  console.log()
+
   return (
     <Layout title={siteTitle}>
       <SEO
@@ -74,6 +76,11 @@ const BlogPostTemplate = ({ data }) => {
           name="options[redirect]"
           type="hidden"
           value={data.site.siteMetadata.siteUrl}
+        />
+        <input
+          name="options[article]"
+          type="hidden"
+          value={window.location.pathname.slice(1, -1)}
         />
         <input name="options[slug]" type="hidden" value="{{ page.slug }}" />
         <label>
