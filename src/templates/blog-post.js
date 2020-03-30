@@ -11,8 +11,12 @@ const Article = styled.article`
   align-items: center;
   justify-content: center;
   max-width: 1000px;
+  width: 100%;
+  box-sizing: border-box;
   font-family: "Lora";
   color: #2e3440;
+  margin: 40px;
+  padding: 50px;
 `
 
 const Title = styled.h2`
@@ -30,7 +34,7 @@ const Subtitle = styled.h3`
 
 const Content = styled.section`
   margin: 30px 0px 0px 0px;
-  width: 1000px;
+  width: 100%;
 `
 
 const Header = styled.header`
