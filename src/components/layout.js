@@ -3,10 +3,13 @@ import Header from "./header"
 import styled from "styled-components"
 
 const Footer = styled.footer`
-  width: 100vw;
-  text-align: right;
-  padding-right: 20px;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 10px;
   box-sizing: border-box;
+  width: 100%;
 `
 
 const Main = styled.main`
@@ -18,16 +21,24 @@ const Main = styled.main`
 
 const Wrapper = styled.div`
   font-family: Lora;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
 `
 
 const Layout = ({ title, children }) => (
-  <>
+  <Wrapper>
     <Header>{title}</Header>
-    <Wrapper>
-      <Main style={{}}>{children}</Main>
-      <Footer>© {new Date().getFullYear()}, by Tim Simon</Footer>
-    </Wrapper>
-  </>
+    <Main>{children}</Main>
+    <Footer>
+      This work is licensed under a&nbsp;
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        CC BY 4.0
+      </a>
+      .
+    </Footer>
+  </Wrapper>
 )
 
 export default Layout
