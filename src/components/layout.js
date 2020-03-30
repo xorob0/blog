@@ -10,6 +10,7 @@ const Footer = styled.footer`
   padding-right: 10px;
   box-sizing: border-box;
   width: 100%;
+  flex-wrap: wrap;
 `
 
 const Main = styled.main`
