@@ -67,20 +67,15 @@ const BlogPostTemplate = ({ data }) => {
       </Article>
 
       <form
-        method="post"
-        action="https://dev.staticman.net/v3/entry/github/xorob0/blog/master"
+        method="POST"
+        action="https://api.staticman.net/v3/entry/github/xorob0/blog/master"
       >
-        <input type="hidden" value={data.site.siteMetadata.siteUrl} />
         <input
           name="options[redirect]"
           type="hidden"
-          value="https://my-site.com"
+          value={data.site.siteMetadata.siteUrl}
         />
-        <input
-          name="options[article]"
-          type="hidden"
-          value={data.markdownRemark.id}
-        />
+        <input name="options[slug]" type="hidden" value="{{ page.slug }}" />
         <label>
           <input name="fields[name]" type="text" />
           Name
