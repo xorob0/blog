@@ -159,11 +159,6 @@ const BlogPostTemplate = ({ data }) => {
         action="https://staticman3.herokuapp.com/v2/entry/xorob0/blog/master/comments"
       >
         <input
-          name="field[article]"
-          type="hidden"
-          value={typeof window !== "undefined" && window.location.pathname}
-        />
-        <input
           name="option[article]"
           type="hidden"
           value={typeof window !== "undefined" && window.location.pathname}
