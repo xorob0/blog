@@ -80,7 +80,7 @@ const BlogPostTemplate = ({ data }) => {
         <input
           name="options[article]"
           type="hidden"
-          value={window.location.pathname.slice(1, -1)}
+          value={window && window.location.pathname.slice(1, -1)}
         />
         <input name="options[slug]" type="hidden" value="{{ page.slug }}" />
         <label>
