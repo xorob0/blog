@@ -77,7 +77,9 @@ const Header = ({ children }) => {
         </HomeLink>
       </Grow>
       <Nav>
-        <NavElement to="/rss.xml">RSS</NavElement>
+        <NavElement as="a" to="/rss.xml">
+          RSS
+        </NavElement>
         <NavElement to="about">About</NavElement>
       </Nav>
     </Wrapper>
