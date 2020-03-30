@@ -2,5 +2,6 @@
   "id": 1,
   "name": "Toum",
   "message": "Don't hesitate to comment !",
-  "date": 0
+  "date": 0,
+  "article": "/hello-world/"
 }
