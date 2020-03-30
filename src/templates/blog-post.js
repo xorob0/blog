@@ -67,10 +67,15 @@ const BlogPostTemplate = ({ data }) => {
       </Article>
 
       <form
-        method="POST"
+        method="post"
         action="https://dev.staticman.net/v3/entry/github/xorob0/blog/master"
       >
         <input type="hidden" value={data.site.siteMetadata.siteUrl} />
+        <input
+          name="options[redirect]"
+          type="hidden"
+          value="https://my-site.com"
+        />
         <input
           name="options[article]"
           type="hidden"
