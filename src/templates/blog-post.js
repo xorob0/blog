@@ -102,10 +102,9 @@ const TextArea = styled.textarea`
   border: none;
   margin: 10px 0px;
   font-family: "Lora";
-  resize: none;
   font-size: 14px;
   max-width: 500px;
-  height: 350px;
+  height: 200px;
   border-radius: 5px;
   &:focus {
     outline: none;
@@ -120,6 +119,11 @@ const Button = styled.button`
   padding: 10px;
   border-radius: 5px;
   max-width: 300px;
+`
+
+const LabelWrapper = styled.label`
+  display: flex;
+  flex-direction: column;
 `
 
 const BlogPostTemplate = ({ data }) => {
@@ -168,15 +172,21 @@ const BlogPostTemplate = ({ data }) => {
           type="hidden"
           value={typeof window !== "undefined" && window.location.pathname}
         />
-        <Input
-          name="fields[name]"
-          type="text"
-          placeholder="xxxPussySlayerxxx"
-        />
-        <TextArea
-          name="fields[message]"
-          placeholder="Stop your bullshit man !"
-        />
+        <LabelWrapper>
+          Name:{" "}
+          <Input
+            name="fields[name]"
+            type="text"
+            placeholder="xxxPussySlayerxxx"
+          />
+        </LabelWrapper>
+        <LabelWrapper>
+          Comment:{" "}
+          <TextArea
+            name="fields[message]"
+            placeholder="Stop your bullshit man !"
+          />
+        </LabelWrapper>
         <Button type="submit">Send a comment request</Button>
       </Form>
     </Layout>
