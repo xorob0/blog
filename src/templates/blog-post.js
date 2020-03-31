@@ -124,6 +124,7 @@ const Button = styled.button`
 const LabelWrapper = styled.label`
   display: flex;
   flex-direction: column;
+  color: #2e3440;
 `
 
 const BlogPostTemplate = ({ data }) => {
