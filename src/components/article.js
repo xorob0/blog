@@ -4,6 +4,9 @@ import { A } from "./a"
 
 const ArticleContainer = styled.article`
   max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
 `
 
 const LinkContainer = styled(A)`
@@ -17,26 +20,28 @@ const LinkContainer = styled(A)`
 const Title = styled.h2`
   font-family: "Lora";
   font-size: 36px;
-  margin: 10px 0px;
+  margin: 15px 0px;
   font-weight: bold;
+  text-align: center;
 `
 
 const Subtitle = styled.h2`
   font-family: "Lora";
   font-size: 24px;
   font-weight: 100;
-  margin: 10px 0px;
+  margin: 5px 0px;
+  text-align: center;
 `
 
 const Label = styled.small`
   font-family: "Lora";
   color: #2e3440;
-  margin: 20px 0px;
+  text-align: right;
+  margin: 5px 0px;
 `
 
 const Spacer = styled.hr`
-  margin: 10px 0px;
-  margin-bottom: 30px;
+  margin: 4px 0px;
 `
 
 const Article = ({ node }) => {
@@ -52,7 +57,7 @@ const Article = ({ node }) => {
         />
       </LinkContainer>
       <Label>
-        Posted by {node.frontmatter.author} on {node.frontmatter.date}
+        {node.frontmatter.date} by {node.frontmatter.author}
       </Label>
       <Spacer />
     </ArticleContainer>

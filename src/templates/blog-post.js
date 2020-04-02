@@ -104,7 +104,7 @@ const TextArea = styled.textarea`
   font-family: "Lora";
   font-size: 14px;
   max-width: 500px;
-  height: 200px;
+  height: 80px;
   border-radius: 5px;
   &:focus {
     outline: none;
@@ -119,6 +119,7 @@ const Button = styled.button`
   padding: 10px;
   border-radius: 5px;
   max-width: 300px;
+  margin: 10px 0px;
 `
 
 const LabelWrapper = styled.label`
