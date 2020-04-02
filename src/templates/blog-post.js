@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -98,7 +98,7 @@ const Input = styled.input`
 `
 const TextArea = styled.textarea`
   padding: 4px;
-  background: #eceff4;
+  background: #2e3440;
   border: none;
   margin: 10px 0px;
   font-family: "Lora";
@@ -120,6 +120,10 @@ const Button = styled.button`
   border-radius: 5px;
   max-width: 300px;
   margin: 10px 0px;
+  &:hover,
+  &:active {
+    background: #2e3440;
+  }
 `
 
 const LabelWrapper = styled.label`
@@ -129,6 +133,7 @@ const LabelWrapper = styled.label`
 `
 
 const BlogPostTemplate = ({ data, pathContext: { slug } }) => {
+  const [isSubmiting, setIsSubmiting] = useState(false)
   const post = data.markdownRemark
   const { siteUrl, title: siteTitle } = data.site.siteMetadata
   const comments = data.allCommentsJson.edges
@@ -163,6 +168,7 @@ const BlogPostTemplate = ({ data, pathContext: { slug } }) => {
       <Form
         method="POST"
         action="https://staticman3.herokuapp.com/v2/entry/xorob0/blog/master/comments"
+        onSubmit={e => setIsSubmiting(true)}
       >
         <input
           name="options[redirect]"
@@ -185,7 +191,9 @@ const BlogPostTemplate = ({ data, pathContext: { slug } }) => {
             placeholder="Stop your bullshit man !"
           />
         </LabelWrapper>
-        <Button type="submit">Send a comment request</Button>
+        <Button type="submit">
+          {isSubmiting ? "Sending..." : "Send a comment request"}
+        </Button>
       </Form>
     </Layout>
   )
