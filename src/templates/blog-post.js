@@ -127,9 +127,9 @@ const LabelWrapper = styled.label`
   color: #2e3440;
 `
 
-const BlogPostTemplate = ({ data }) => {
+const BlogPostTemplate = ({ data, pathContext: { slug } }) => {
   const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
+  const { siteUrl, title: siteTitle } = data.site.siteMetadata
   const comments = data.allCommentsJson.edges
   return (
     <Layout title={siteTitle}>
@@ -166,13 +166,9 @@ const BlogPostTemplate = ({ data }) => {
         <input
           name="options[redirect]"
           type="hidden"
-          value={typeof window !== "undefined" && window.location.href}
+          value={`${siteUrl}${slug}`}
         />
-        <input
-          name="fields[article]"
-          type="hidden"
-          value={typeof window !== "undefined" && window.location.pathname}
-        />
+        <input name="fields[article]" type="hidden" value={slug} />
         <LabelWrapper>
           Name:{" "}
           <Input
