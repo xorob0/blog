@@ -4,7 +4,6 @@ import styled from "styled-components"
 
 const Footer = styled.footer`
   display: flex;
-  flex-grow: 1;
   align-items: flex-end;
   justify-content: flex-end;
   padding-right: 10px;
@@ -18,6 +17,7 @@ const Main = styled.main`
   align-items: center;
   flex-direction: column;
   padding: 20px;
+  flex-grow: 1;
 `
 
 const Wrapper = styled.div`

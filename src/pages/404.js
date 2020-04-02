@@ -7,17 +7,14 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 
 const SetImg = styled(Img)`
-  display: block !important;
   margin: 0 auto;
+
+  width: 100%;
+  margin: 10px;
   flex-grow: 1;
+  padding-top: 40%;
 
-  height: 800px;
-  width: 500px;
-
-  @media (max-width: 580px) {
-    height: 400px;
-    width: 250px;
-  }
+  max-width: props.fluid.presentationWidth;
 `
 
 const NotFoundPage = ({ data, location }) => {
