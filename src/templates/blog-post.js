@@ -98,7 +98,7 @@ const Input = styled.input`
 `
 const TextArea = styled.textarea`
   padding: 4px;
-  background: #2e3440;
+  background: #eceff4;
   border: none;
   margin: 10px 0px;
   font-family: "Lora";
