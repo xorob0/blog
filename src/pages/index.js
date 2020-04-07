@@ -20,7 +20,7 @@ const BlogIndex = ({ data }) => {
   return (
     <Layout title={siteTitle}>
       <SEO title="All posts" />
-      <Summary> {data.site.siteMetadata.author.shortSummary}</Summary>
+      <Summary>{data.site.siteMetadata.author.shortSummary}</Summary>
       <ArticleList>
         {posts.map(({ node }) => (
           <Article node={node} />
