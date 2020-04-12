@@ -41,8 +41,8 @@ const Content = styled.section`
     padding-left: 1em;
   }
 
-  * li:before,
-  li:before {
+  * li p:first-of-type:before,
+  * li a:first-of-type:before {
     display: inline-block;
     content: "~";
     width: 1em;
@@ -96,6 +96,17 @@ const CommentContentWrapper = styled.div`
 
 const CommentContent = styled.p`
   padding-left: 4px;
+`
+
+const EmptyCommentSection = styled.section`
+  margin-bottom: 40px;
+  margin-left: 10px;
+`
+
+const EmptyCommentText = styled.p`
+  font-size: 20px;
+  text-align: center;
+  font-style: ${({ italic }) => (italic ? "italic" : "unset")};
 `
 
 const Form = styled.form`
@@ -174,17 +185,24 @@ const BlogPostTemplate = ({ data, pathContext: { slug } }) => {
         </Header>
         <Content dangerouslySetInnerHTML={{ __html: post.html }} />
       </Article>
-      {comments.length ? (
-        <CommentsWrapper>
-          <CommentsTitle>Your comments:</CommentsTitle>
-          {comments.map(({ node: { message, name } }) => (
-            <CommentContentWrapper>
-              <CommentName>{name}</CommentName>
-              <CommentContent>{message}</CommentContent>
-            </CommentContentWrapper>
-          ))}
-        </CommentsWrapper>
-      ) : null}
+      <CommentsWrapper>
+        <CommentsTitle>Your comments:</CommentsTitle>
+        {comments.length ? (
+          <>
+            {comments.map(({ node: { message, name } }) => (
+              <CommentContentWrapper>
+                <CommentName>{name}</CommentName>
+                <CommentContent>{message}</CommentContent>
+              </CommentContentWrapper>
+            ))}
+          </>
+        ) : (
+          <EmptyCommentSection>
+            <EmptyCommentText italic>No comments yet </EmptyCommentText>
+            <EmptyCommentText>😢😢😢</EmptyCommentText>
+          </EmptyCommentSection>
+        )}
+      </CommentsWrapper>
 
       <Form
         method="POST"
