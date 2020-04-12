@@ -34,12 +34,15 @@ const Content = styled.section`
   margin: 30px 0px 0px 0px;
   width: fit-content;
 
-  * ul {
+  * ul,
+  ul {
     list-style: none;
     margin-left: 0;
     padding-left: 1em;
   }
-  * ul > li:before {
+
+  * li:before,
+  li:before {
     display: inline-block;
     content: "~";
     width: 1em;
@@ -47,7 +50,7 @@ const Content = styled.section`
     font-weight: bold;
   }
 
-  * .gatsby-resp-image-wrapper,
+  .gatsby-resp-image-wrapper,
   img {
     margin: 15px;
   }
