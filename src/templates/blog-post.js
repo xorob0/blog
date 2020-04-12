@@ -67,7 +67,7 @@ const Content = styled.section`
   }
 
   .gatsby-highlight {
-    background-color: #3b4252;
+    background-color: #2e3440;
     border-radius: 0.3em;
     margin: 0.5em 0;
     padding: 1em;
