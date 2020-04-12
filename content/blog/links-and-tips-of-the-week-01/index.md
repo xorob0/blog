@@ -50,20 +50,20 @@ function ls () {
 ```
 
 - Last one on shells is this command to see your most used commands on zsh:
-```
+```zsh
 history 0 | awk 'BEGIN {FS="[ \t]+|\\|"} {print $3}' | sort | uniq -c | sort -nr | head -n 15
 ```
 - And on bash:
-```
+```bash
 history | awk 'BEGIN {FS="[ \t]+|\\|"} {print $3}' | sort | uniq -c | sort -nr | head -n 15
 ```
 
 - And the last one for this week will be on HTML, where I learned about the `srcset` property of the `<img/>` tag. `srcset` takes an array of images with their breakpoints and modern browser will fetch the image according to the resolution of the device. Really useful to reduce the size of your webpage on mobile. I always thought GatsbyJS did that using some Javascript magic.
-```
+```html
 <img srcset="elva-fairy-480w.jpg 480w,
              elva-fairy-800w.jpg 800w"
      src="elva-fairy-800w.jpg"
-     alt="Elva dressed as a fairy">
+     alt="Elva dressed as a fairy"/>
 ```
 
 See you next week, unless I finish my Riot/Matrix article soon ;)
