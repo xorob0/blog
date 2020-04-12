@@ -84,7 +84,7 @@ const Content = styled.section`
   pre[class*="language-"] {
     color: #f8f8f2;
     font-family: Fira Code, Consolas, Monaco, "Ubuntu Mono", monospace;
-    background: none;
+    background: #2e3440;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
