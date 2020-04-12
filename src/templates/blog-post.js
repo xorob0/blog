@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import styled, { createGlobalStyle } from "styled-components"
+import styled from "styled-components"
 
 const Article = styled.article`
   display: flex;
@@ -53,6 +53,10 @@ const Content = styled.section`
   .gatsby-resp-image-wrapper,
   img {
     margin: 15px;
+  }
+  pre,
+  code {
+    white-space: pre-wrap;
   }
 `
 
@@ -106,7 +110,12 @@ const EmptyCommentSection = styled.section`
 const EmptyCommentText = styled.p`
   font-size: 20px;
   text-align: center;
-  font-style: ${({ italic }) => (italic ? "italic" : "unset")};
+  font-style: italic;
+`
+
+const EmptyCommentSpan = styled.span`
+  font-size: 20px;
+  text-align: center;
 `
 
 const Form = styled.form`
@@ -198,8 +207,10 @@ const BlogPostTemplate = ({ data, pathContext: { slug } }) => {
           </>
         ) : (
           <EmptyCommentSection>
-            <EmptyCommentText italic>No comments yet </EmptyCommentText>
-            <EmptyCommentText>😢😢😢</EmptyCommentText>
+            <EmptyCommentText>No comments yet</EmptyCommentText>
+            <EmptyCommentSpan role="img" aria-label="sadness">
+              😢😢😢
+            </EmptyCommentSpan>
           </EmptyCommentSection>
         )}
       </CommentsWrapper>
