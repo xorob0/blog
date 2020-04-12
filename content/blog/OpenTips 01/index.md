@@ -14,7 +14,7 @@ post the intersting tips and open-source projets I find over the week.
 
 - [termtosvg](https://github.com/nbedos/termtosvg): A python tool to record a console session to an svg file. It can be really cool for a quick demo or for a project's README. Under BSD 3-Clause License.<br/>
 <picture style="display: flex; width: 100%; justify-content: center; align-items: center">
-	<img style="max-width: 100%; height: auto;" src="./awesome_window_frame_powershell.svg">
+![recording of a console session](./awesome_window_frame_powershell.svg)
 </picture>
 
 - [lozya](https://github.com/capnmidnight/lozya): A hack on top of Jitsi to create a virtual meeting room where users can sit next to each other to hear each other better. I love the idea, we used to make discord rooms corresponding to parts of the open-space at the start of the lockdown. Under MIT.

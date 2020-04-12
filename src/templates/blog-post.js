@@ -51,8 +51,11 @@ const Content = styled.section`
   }
 
   .gatsby-resp-image-wrapper,
-  img {
+  img,
+  * img {
     margin: 15px;
+    max-width: 100%;
+    height: auto;
   }
   pre,
   code {
