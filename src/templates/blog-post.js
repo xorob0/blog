@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import styled from "styled-components"
+import styled, { createGlobalStyle } from "styled-components"
 
 const Article = styled.article`
   display: flex;
@@ -33,6 +33,24 @@ const Subtitle = styled.h4`
 const Content = styled.section`
   margin: 30px 0px 0px 0px;
   width: fit-content;
+
+  * ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+  }
+  * ul > li:before {
+    display: inline-block;
+    content: "~";
+    width: 1em;
+    margin-left: -1em;
+    font-weight: bold;
+  }
+
+  * .gatsby-resp-image-wrapper,
+  img {
+    margin: 15px;
+  }
 `
 
 const Header = styled.header`

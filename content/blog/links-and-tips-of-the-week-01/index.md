@@ -12,8 +12,10 @@ post the interstings tips and open-source projet I found over the week.
 
 ### Projects
 
-- [termtosvg](https://github.com/nbedos/termtosvg): A python projet to register a console session to an svg file. Under BSD 3-Clause License. It can be really cool for a quick demo or for a project's README.
+- [termtosvg](https://github.com/nbedos/termtosvg): A python projet to register a console session to an svg file. Under BSD 3-Clause License. It can be really cool for a quick demo or for a project's README.<br/>
+<picture style="display: flex; width: 100%; justify-content: center; align-items: center">
 ![termtosvg of a terminal recorded session](./awesome_window_frame_powershell.svg)
+</picture>
 
 - [lozya](https://github.com/capnmidnight/lozya): A hack on top of Jitsi to create a virtual meeting room where users can sit next to each other to hear each other better. I love the idea, we used to make discord rooms corresponding to parts of the open-space at the start of the lockdown. Under MIT.
 ![lozya example showing a jitsi room with a rpg-like board to move around the room](./lozya.png)
