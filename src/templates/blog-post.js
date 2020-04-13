@@ -87,6 +87,7 @@ const Content = styled.section`
     background: #2e3440;
     text-align: left;
     white-space: pre;
+    text-shadow: 0 1px #3b4252;
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
