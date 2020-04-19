@@ -10,8 +10,8 @@ const Article = styled.article`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 1000px;
-  width: 100%;
+  max-width: 100%;
+  width: 1000px;
   box-sizing: border-box;
   font-family: "Lora";
   color: ${({ theme }) => theme.text};
@@ -33,6 +33,7 @@ const Subtitle = styled.h4`
 const Content = styled.section`
   margin: 30px 0px 0px 0px;
   width: fit-content;
+  max-width: 100%;
 
   * ul,
   ul {
