@@ -40,7 +40,17 @@ const Content = styled.section`
     margin-left: 0;
     padding-left: 1em;
   }
+  a {
+    &:link,
+    &:visited {
+      color: #5e81ac;
+    }
 
+    &:hover,
+    &:active {
+      color: #8fbcbb;
+    }
+  }
   * li p:first-of-type:before,
   * li a:first-of-type:before {
     display: inline-block;
