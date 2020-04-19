@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Header from "./header"
 import styled, { ThemeProvider } from "styled-components"
 
@@ -88,6 +88,17 @@ const dark = {
 
 const Layout = ({ title, children }) => {
   const [theme, setTheme] = useState(light)
+
+  useEffect(() => {
+    if (
+      window &&
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      setTheme(dark)
+    }
+  }, [])
+
   const toggleTheme = () =>
     setTheme(t => (t.background === light.background ? dark : light))
 
