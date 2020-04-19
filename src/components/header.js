@@ -54,7 +54,6 @@ const Nav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 40px;
   text-decoration: underline;
   @media (max-width: 570px) {
     flex: 1;
