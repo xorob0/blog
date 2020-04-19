@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { A } from "./a"
 import Logo from "../../content/assets/Logo.svg"
 import { ThemeContext } from "styled-components"
+import { ToggleContext } from "../theme/context"
 
 const Wrapper = styled.div`
   width: 100vw;
@@ -74,8 +75,9 @@ const DarkThemeButton = styled.button`
   outline: none;
 `
 
-const Header = ({ children, toggleTheme }) => {
+const Header = ({ children }) => {
   const theme = useContext(ThemeContext)
+  const { toggleTheme } = useContext(ToggleContext)
   return (
     <Wrapper>
       <Grow>
