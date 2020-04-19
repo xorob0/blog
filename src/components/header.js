@@ -92,7 +92,10 @@ const Header = ({ children }) => {
         </NavElement>
         <NavElement to="about">About</NavElement>
       </Nav>
-      <DarkThemeButton onClick={toggleTheme} title="toggle">
+      <DarkThemeButton
+        onClick={toggleTheme}
+        title={`Enable ${theme.name} theme`}
+      >
         {theme.name === "light" ? "🌚" : "😎"}
       </DarkThemeButton>
     </Wrapper>
