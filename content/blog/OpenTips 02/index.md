@@ -1,6 +1,6 @@
 ---
 title: OpenTips 02
-date: "2020-04-12T08:38:07+0200"
+date: "2020-04-19T11:05:33+0200"
 description: "My weekly tips and links for the week"
 author: "Toum"
 ---
@@ -35,3 +35,7 @@ This was a small week, with some intersting discoveries, not a lot of tips throu
 
 - Docker's `uname`: At the same time I discovered that the command `uname` executed in a Docker container will give you the output of the *host*. This was really not useful for me when trying to test my dotfiles in Dockers.
 
+```bash
+toum@archlinuxdocker:~$ uname -a
+Linux XPS 5.3.0-40-generic #32-Ubuntu SMP Fri Jan 31 20:24:34 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+```
