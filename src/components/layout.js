@@ -60,11 +60,28 @@ const light = {
   buttonHover: nord.nord0,
   buttonText: nord.nord6,
   inputBackground: nord.nord6,
+  codeBackground: nord.nord0,
+  codeTextNormal: nord.nord6,
+  codeTextShadow: nord.nord1,
+  codeTextComment: nord.nord3,
 }
 
 const dark = {
   background: nord.nord0,
   text: nord.nord6,
+  hover: nord.nord10,
+  title: nord.nord10,
+  titleHover: nord.nord7,
+  link: nord.nord10,
+  linkHover: nord.nord7,
+  button: nord.nord1,
+  buttonHover: nord.nord0,
+  buttonText: nord.nord6,
+  inputBackground: nord.nord6,
+  codeBackground: nord.nord6,
+  codeTextNormal: nord.nord0,
+  codeTextShadow: nord.nord5,
+  codeTextComment: nord.nord3,
 }
 
 const Layout = ({ title, children }) => {

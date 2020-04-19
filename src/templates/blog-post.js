@@ -11,6 +11,7 @@ const Article = styled.article`
   align-items: center;
   justify-content: center;
   max-width: 1000px;
+  max-width: 100%;
   width: 100%;
   box-sizing: border-box;
   font-family: "Lora";
@@ -81,7 +82,7 @@ const Content = styled.section`
   }
 
   .gatsby-highlight {
-    background-color: #2e3440;
+    background-color: ${({ theme }) => theme.codeBackground};
     border-radius: 0.3em;
     margin: 0.5em 0;
     padding: 1em;
@@ -96,12 +97,12 @@ const Content = styled.section`
 
   code[class*="language-"],
   pre[class*="language-"] {
-    color: #f8f8f2;
+    color: ${({ theme }) => theme.codeTextNormal};
     font-family: Fira Code, Consolas, Monaco, "Ubuntu Mono", monospace;
-    background: #2e3440;
+    background: ${({ theme }) => theme.codeBackground};
     text-align: left;
     white-space: pre;
-    text-shadow: 0 1px #3b4252;
+    text-shadow: 0 1px ${({ theme }) => theme.codeTextShadow};
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
@@ -124,7 +125,7 @@ const Content = styled.section`
 
   :not(pre) > code[class*="language-"],
   pre[class*="language-"] {
-    background: #2e3440;
+    background: ${({ theme }) => theme.codeBackground};
   }
 
   :not(pre) > code[class*="language-"] {
@@ -137,7 +138,7 @@ const Content = styled.section`
   .token.prolog,
   .token.doctype,
   .token.cdata {
-    color: #636f88;
+    color: ${({ theme }) => theme.codeTextComment};
   }
 
   .token.punctuation {
