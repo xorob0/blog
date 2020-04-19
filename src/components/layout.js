@@ -14,7 +14,6 @@ const Footer = styled.footer`
 `
 
 const Main = styled.main`
-  display: flex;
   align-items: center;
   flex-direction: column;
   flex-grow: 1;
