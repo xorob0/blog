@@ -11,7 +11,6 @@ const Article = styled.article`
   align-items: center;
   justify-content: center;
   max-width: 1000px;
-  max-width: 100%;
   width: 100%;
   box-sizing: border-box;
   font-family: "Lora";
