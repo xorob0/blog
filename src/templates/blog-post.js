@@ -60,6 +60,10 @@ const Content = styled.section`
     font-weight: bold;
   }
 
+  ul li {
+    padding: 10px 0px;
+  }
+
   .gatsby-resp-image-wrapper,
   img,
   * img {
