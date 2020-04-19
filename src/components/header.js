@@ -97,7 +97,7 @@ const Header = ({ children }) => {
       <DarkThemeButton
         onClick={toggleTheme}
         title={`Enable ${
-          theme.name === light.name ? light.name : dark.name
+          theme && theme.name === light.name ? light.name : dark.name
         } theme`}
       >
         {theme.name === "light" ? "🌚" : "😎"}
