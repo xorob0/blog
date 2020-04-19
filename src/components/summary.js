@@ -4,7 +4,7 @@ const Summary = styled.h4`
   margin: 50px 50px;
   font-size: 34px;
   font-weight: normal;
-  color: #2e3440;
+  color: ${({ theme }) => theme.text};
   font-family: "Lustria";
   max-width: 1000px;
   text-align: center;

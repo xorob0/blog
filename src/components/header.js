@@ -18,9 +18,9 @@ const Grow = styled.div`
 const Title = styled.h1`
   font-size: 42px;
   font-family: "Lustria";
-  color: #5e81ac;
+  color: ${({ theme }) => theme.title};
   &:hover {
-    color: #2e3440;
+    color: ${({ theme }) => theme.titleHover};
   }
   transition: 0.3s;
   margin: 0px 10px;
@@ -42,9 +42,9 @@ const NavElement = styled(A)`
   font-size: 24;
   font-family: "Lora";
   margin: 0px 10px;
-  color: #2e3440;
+  color: ${({ theme }) => theme.text};
   &:hover {
-    color: #5e81ac;
+    color: ${({ theme }) => theme.linkHover};
   }
   transition: 0.3s;
 `
@@ -67,7 +67,7 @@ const HomeLink = styled(A)`
   margin: 10px 20px;
 `
 
-const Header = ({ children }) => {
+const Header = ({ children, toggleTheme }) => {
   return (
     <Wrapper>
       <Grow>
@@ -82,6 +82,7 @@ const Header = ({ children }) => {
         </NavElement>
         <NavElement to="about">About</NavElement>
       </Nav>
+      <button onClick={toggleTheme} title="toggle" />
     </Wrapper>
   )
 }

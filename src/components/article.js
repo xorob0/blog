@@ -10,9 +10,9 @@ const ArticleContainer = styled.article`
 `
 
 const LinkContainer = styled(A)`
-  color: #2e3440;
+  color: ${({ theme }) => theme.text};
   &:hover {
-    color: #5e81ac;
+    color: ${({ theme }) => theme.linkHover};
   }
   transition: 0.3s;
 `
@@ -35,7 +35,7 @@ const Subtitle = styled.h2`
 
 const Label = styled.small`
   font-family: "Lora";
-  color: #2e3440;
+  color: ${({ theme }) => theme.text};
   text-align: right;
   margin: 5px 0px;
 `

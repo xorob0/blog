@@ -14,7 +14,7 @@ const Article = styled.article`
   width: 100%;
   box-sizing: border-box;
   font-family: "Lora";
-  color: #2e3440;
+  color: ${({ theme }) => theme.text};
 `
 
 const Title = styled.h2`
@@ -43,12 +43,12 @@ const Content = styled.section`
   a {
     &:link,
     &:visited {
-      color: #5e81ac;
+      color: ${({ theme }) => theme.link};
     }
 
     &:hover,
     &:active {
-      color: #8fbcbb;
+      color: ${({ theme }) => theme.linkHover};
     }
   }
   * li p:first-of-type:before,
@@ -228,7 +228,7 @@ const CommentsWrapper = styled.section`
   width: 100%;
   align-items: flex-start;
   flex-direction: column;
-  color: #2e3440;
+  color: ${({ theme }) => theme.text};
 `
 
 const CommentsTitle = styled.h3`
@@ -278,7 +278,7 @@ const Form = styled.form`
 `
 const Input = styled.input`
   padding: 4px;
-  background: #eceff4;
+  background: ${({ theme }) => theme.inputBackground};
   border: none;
   margin: 10px 0px;
   font-size: 18px;
@@ -292,7 +292,7 @@ const Input = styled.input`
 `
 const TextArea = styled.textarea`
   padding: 4px;
-  background: #eceff4;
+  background: ${({ theme }) => theme.inputBackground};
   border: none;
   margin: 10px 0px;
   font-family: "Lora";
@@ -308,22 +308,22 @@ const Button = styled.button`
   font-size: 18px;
   font-family: "Lora";
   border: none;
-  background: #3b4252;
-  color: #eceff4;
+  background: ${({ theme }) => theme.button};
+  color: ${({ theme }) => theme.buttonText};
   padding: 10px;
   border-radius: 5px;
   max-width: 300px;
   margin: 10px 0px;
   &:hover,
   &:active {
-    background: #2e3440;
+    background: ${({ theme }) => theme.buttonHover};
   }
 `
 
 const LabelWrapper = styled.label`
   display: flex;
   flex-direction: column;
-  color: #2e3440;
+  color: ${({ theme }) => theme.text};
 `
 
 const BlogPostTemplate = ({ data, pathContext: { slug } }) => {
