@@ -17,8 +17,12 @@ const Main = styled.main`
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 20px;
   flex-grow: 1;
+
+  max-width: 100%;
+  > * {
+    padding: 0px 20px;
+  }
 `
 
 const Wrapper = styled.div`
