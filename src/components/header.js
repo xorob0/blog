@@ -100,7 +100,7 @@ const Header = ({ children }) => {
           theme && theme.name === light.name ? light.name : dark.name
         } theme`}
       >
-        {theme.name === "light" ? "🌚" : "😎"}
+        {theme && theme.name === "light" ? "🌚" : "😎"}
       </DarkThemeButton>
     </Wrapper>
   )
