@@ -4,6 +4,8 @@ import { A } from "./a"
 import Logo from "../../content/assets/Logo.svg"
 import { ThemeContext } from "styled-components"
 import { ToggleContext } from "../theme/context"
+import light from "../theme/light"
+import dark from "../theme/dark"
 
 const Wrapper = styled.div`
   width: 100vw;
@@ -94,7 +96,7 @@ const Header = ({ children }) => {
       </Nav>
       <DarkThemeButton
         onClick={toggleTheme}
-        title={`Enable ${theme.name} theme`}
+        title={`Enable ${theme.name === light ? light.name : dark.name} theme`}
       >
         {theme.name === "light" ? "🌚" : "😎"}
       </DarkThemeButton>
