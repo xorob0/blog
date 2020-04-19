@@ -49,6 +49,7 @@ const nord = {
 }
 
 const light = {
+  name: "light",
   background: "white",
   text: nord.nord0,
   hover: nord.nord10,
@@ -67,6 +68,7 @@ const light = {
 }
 
 const dark = {
+  name: "dark",
   background: nord.nord0,
   text: nord.nord6,
   hover: nord.nord10,

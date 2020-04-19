@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useContext } from "react"
 import styled from "styled-components"
 import { A } from "./a"
 import Logo from "../../content/assets/Logo.svg"
+import { ThemeContext } from "styled-components"
 
 const Wrapper = styled.div`
   width: 100vw;
@@ -67,7 +68,15 @@ const HomeLink = styled(A)`
   margin: 10px 20px;
 `
 
+const DarkThemeButton = styled.button`
+  background: none;
+  border: none;
+  width: 50px;
+  outline: none;
+`
+
 const Header = ({ children, toggleTheme }) => {
+  const theme = useContext(ThemeContext)
   return (
     <Wrapper>
       <Grow>
@@ -82,7 +91,9 @@ const Header = ({ children, toggleTheme }) => {
         </NavElement>
         <NavElement to="about">About</NavElement>
       </Nav>
-      <button onClick={toggleTheme} title="toggle" />
+      <DarkThemeButton onClick={toggleTheme} title="toggle">
+        {theme.name === "light" ? "🌚" : "😎"}
+      </DarkThemeButton>
     </Wrapper>
   )
 }
