@@ -226,10 +226,10 @@ const Label = styled.small`
 
 const CommentsWrapper = styled.section`
   display: flex;
-  width: 100%;
   align-items: flex-start;
   flex-direction: column;
   color: ${({ theme }) => theme.text};
+  max-width: 100%;
 `
 
 const CommentsTitle = styled.h3`
@@ -298,7 +298,7 @@ const TextArea = styled.textarea`
   margin: 10px 0px;
   font-family: "Lora";
   font-size: 14px;
-  max-width: 500px;
+  width: 90vw;
   height: 80px;
   border-radius: 5px;
   &:focus {
@@ -367,38 +367,38 @@ const BlogPostTemplate = ({ data, pathContext: { slug } }) => {
             </EmptyCommentSpan>
           </EmptyCommentSection>
         )}
-      </CommentsWrapper>
 
-      <Form
-        method="POST"
-        action="https://staticman3.herokuapp.com/v2/entry/xorob0/blog/master/comments"
-        onSubmit={e => setIsSubmiting(true)}
-      >
-        <input
-          name="options[redirect]"
-          type="hidden"
-          value={`${siteUrl}${slug}`}
-        />
-        <input name="fields[article]" type="hidden" value={slug} />
-        <LabelWrapper>
-          Name:{" "}
-          <Input
-            name="fields[name]"
-            type="text"
-            placeholder="xxxPussySlayerxxx"
+        <Form
+          method="POST"
+          action="https://staticman3.herokuapp.com/v2/entry/xorob0/blog/master/comments"
+          onSubmit={e => setIsSubmiting(true)}
+        >
+          <input
+            name="options[redirect]"
+            type="hidden"
+            value={`${siteUrl}${slug}`}
           />
-        </LabelWrapper>
-        <LabelWrapper>
-          Comment:{" "}
-          <TextArea
-            name="fields[message]"
-            placeholder="Stop your bullshit man !"
-          />
-        </LabelWrapper>
-        <Button type="submit">
-          {isSubmiting ? "Sending..." : "Send a comment request"}
-        </Button>
-      </Form>
+          <input name="fields[article]" type="hidden" value={slug} />
+          <LabelWrapper>
+            Name:{" "}
+            <Input
+              name="fields[name]"
+              type="text"
+              placeholder="xxxPussySlayerxxx"
+            />
+          </LabelWrapper>
+          <LabelWrapper>
+            Comment:{" "}
+            <TextArea
+              name="fields[message]"
+              placeholder="Stop your bullshit man !"
+            />
+          </LabelWrapper>
+          <Button type="submit">
+            {isSubmiting ? "Sending..." : "Send a comment request"}
+          </Button>
+        </Form>
+      </CommentsWrapper>
     </Layout>
   )
 }
