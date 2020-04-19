@@ -19,7 +19,9 @@ This was a small week, with some intersting discoveries, not a lot of tips throu
 - [Traccar](https://www.traccar.org/client/): A project that can be selfhosted which track your position in realtime. Some will say it's a bad idea, but I wanted to use something like that to work with my [Home Assistant](https://www.home-assistant.io/) setup. Under Apache.
 ![Traccar's web interface screenshot showing my Mi 9 SE located in belgium](./traccar.png)
 - [Avatarify](https://github.com/alievk/avatarify): In this time of lockout and home working, video conferences prank arebecoming more and more popular. This project uses machine learning to "deep-fake" a picture, the only issue with it is that you'll need a powerful GPU to make it work. Under CC BY-NC 4.0.
+<picture style="display: flex; width: 100%; justify-content: center; align-items: center">
 ![A gif showing someone impersonates Mona Lisa in a conference call](./mona.gif)
+</picture>
 - [AltStore](https://github.com/rileytestut/AltStore): This is a project to help people sideload ipa files on their iOS devices. ipa's do not need to be signed by Apple as long as you own a development signing certificate, which can be obtained by paying Apple 99 € or in some places over the internet. This is a really cool project because it will open the door to more pojects like [Delta](https://github.com/rileytestut/Delta) that could be developped independently of Apple's rules. Under AGPLv3 due to dependencies but the author gives explicit permission to use, modify and distribute with or without attribution.
 
 ### Tips
