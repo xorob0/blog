@@ -6,15 +6,27 @@ import SEO from "../components/seo"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
+const extractWidth = str =>
+  str.substring(str.lastIndexOf("(") + 1, str.lastIndexOf(")"))
+
 const SetImg = styled(Img)`
   margin: 0 auto;
 
-  width: 100%;
-  margin: 10px;
   flex-grow: 1;
-  padding-top: 40%;
 
-  max-width: props.fluid.presentationWidth;
+  padding-top: ${props => 100 / props.fluid.aspectRatio}%;
+  ${props => extractWidth(props.fluid.sizes)};
+`
+
+const Title = styled.h1`
+  text-align: center;
+`
+const Paragraph = styled.p`
+  text-align: center;
+`
+
+const CenterWithPadding = styled.div`
+  padding: 10px;
 `
 
 const NotFoundPage = ({ data, location }) => {
@@ -23,15 +35,17 @@ const NotFoundPage = ({ data, location }) => {
   return (
     <Layout title={siteTitle}>
       <SEO title="404: Not Found" />
-      <h1>Not Found</h1>
-      <p>
+      <Title>Not Found</Title>
+      <Paragraph>
         The page you are looking for does not exist. To confort you enjoy this
         picture of my cat.
-      </p>
-      <SetImg
-        fluid={data.cat.childImageSharp.fluid}
-        alt="Olaf the best cat in the world"
-      />
+      </Paragraph>
+      <CenterWithPadding>
+        <SetImg
+          fluid={data.cat.childImageSharp.fluid}
+          alt="Olaf the best cat in the world"
+        />
+      </CenterWithPadding>
     </Layout>
   )
 }

@@ -15,6 +15,7 @@ const Article = styled.article`
   box-sizing: border-box;
   font-family: "Lora";
   color: ${({ theme }) => theme.text};
+  margin: auto;
 `
 
 const Title = styled.h2`
